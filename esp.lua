@@ -17,17 +17,6 @@ function Simple_Create(base, name, trackername, color, studs)
     txtlbl.Text = name
     txtlbl.TextStrokeTransparency = 0.5
     txtlbl.TextColor3 = color
-
-    local txtlblstud = Instance.new('TextLabel', bb)
-    txtlblstud.ZIndex = 10
-    txtlblstud.BackgroundTransparency = 1
-    txtlblstud.Position = UDim2.new(0,0,0,-35)
-    txtlblstud.Size = UDim2.new(1,0,10,0)
-    txtlblstud.Font = 'ArialBold'
-    txtlblstud.FontSize = 'Size12'
-    txtlblstud.Text = tostring(studs) .. " Studs"
-    txtlblstud.TextStrokeTransparency = 0.5
-    txtlblstud.TextColor3 = Color3.new(255,255,255)
 end
 
 -- Clear ESP
