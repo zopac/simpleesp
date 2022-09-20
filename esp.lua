@@ -14,7 +14,7 @@ function Simple_Create(base, name, trackername, color, studs)
     txtlbl.Size = UDim2.new(1,0,10,0)
     txtlbl.Font = 'ArialBold'
     txtlbl.FontSize = 'Size12'
-    txtlbl.Text = name
+    txtlbl.Text = name .. " [" .. studs .. " Studs]"
     txtlbl.TextStrokeTransparency = 0.5
     txtlbl.TextColor3 = color
 end
