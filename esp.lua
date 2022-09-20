@@ -10,7 +10,7 @@ function Simple_Create(base, name, trackername, color, studs)
     local txtlbl = Instance.new('TextLabel', bb)
     txtlbl.ZIndex = 10
     txtlbl.BackgroundTransparency = 1
-    txtlbl.Position = UDim2.new(0,0,0,-48)
+    txtlbl.Position = UDim2.new(0,0,0,-34)
     txtlbl.Size = UDim2.new(1,0,10,0)
     txtlbl.Font = 'ArialBold'
     txtlbl.FontSize = 'Size12'
