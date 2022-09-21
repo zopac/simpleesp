@@ -6,9 +6,7 @@ function Simple_Create(base, name, trackername, color, studs)
     bb.Size = UDim2.new(0,6,0,6)
     bb.StudsOffset = Vector3.new(0,1,0)
     bb.Name = trackername
-    
-    local SleeperCheck = v.Parent.UpperTorso.CFrame.Y - v.Parent.LowerTorso.CFrame.Y
-    
+
     local txtlbl = Instance.new('TextLabel', bb)
     txtlbl.ZIndex = 10
     txtlbl.BackgroundTransparency = 1
@@ -16,7 +14,7 @@ function Simple_Create(base, name, trackername, color, studs)
     txtlbl.Size = UDim2.new(1,0,10,0)
     txtlbl.Font = 'ArialBold'
     txtlbl.FontSize = 'Size12'
-    txtlbl.Text = name .. " [" .. tostring(studs) .. " Studs] " .. "(Sleeper)"
+    txtlbl.Text = name .. " [" .. tostring(studs) .. " Studs] "
     txtlbl.TextStrokeTransparency = 0.5
     txtlbl.TextColor3 = color
 end
