@@ -1,3 +1,5 @@
+local _Character = getrenv()._G.Character;
+
 function Simple_Create(base, name, trackername, color, studs)
     local bb = Instance.new('BillboardGui', game.CoreGui)
     bb.Adornee = base
@@ -6,7 +8,9 @@ function Simple_Create(base, name, trackername, color, studs)
     bb.Size = UDim2.new(0,6,0,6)
     bb.StudsOffset = Vector3.new(0,1,0)
     bb.Name = trackername
-
+    
+    local SleeperCheck = v.Parent.UpperTorso.CFrame.Y - v.Parent.LowerTorso.CFrame.Y
+    
     local txtlbl = Instance.new('TextLabel', bb)
     txtlbl.ZIndex = 10
     txtlbl.BackgroundTransparency = 1
@@ -14,7 +18,13 @@ function Simple_Create(base, name, trackername, color, studs)
     txtlbl.Size = UDim2.new(1,0,10,0)
     txtlbl.Font = 'ArialBold'
     txtlbl.FontSize = 'Size12'
-    txtlbl.Text = name .. " [" .. tostring(studs) .. " Studs]"
+    local actualtext
+    if SleeperCheck > 0.3 then
+        actualtext = name .. " [" .. tostring(studs) .. " Studs]"
+    else
+        name .. " [" .. tostring(studs) .. " Studs] " .. "(Sleeper)"
+    end
+    txtlbl.Text = actualtext
     txtlbl.TextStrokeTransparency = 0.5
     txtlbl.TextColor3 = color
 end
