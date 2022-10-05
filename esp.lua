@@ -1,22 +1,10 @@
-function Simple_Create(base, name, trackername, color, studs)
-    local bb = Instance.new('BillboardGui', game.CoreGui)
-    bb.Adornee = base
-    bb.ExtentsOffset = Vector3.new(0,1,0)
-    bb.AlwaysOnTop = true
-    bb.Size = UDim2.new(0,6,0,6)
-    bb.StudsOffset = Vector3.new(0,1,0)
-    bb.Name = trackername
-
-    local txtlbl = Instance.new('TextLabel', bb)
-    txtlbl.ZIndex = 10
-    txtlbl.BackgroundTransparency = 1
-    txtlbl.Position = UDim2.new(0,0,0,-29)
-    txtlbl.Size = UDim2.new(1,0,10,0)
-    txtlbl.Font = 'ArialBold'
-    txtlbl.FontSize = 'Size12'
-    txtlbl.Text = name .. " [" .. tostring(studs) .. " Studs] "
-    txtlbl.TextStrokeTransparency = 0.5
-    txtlbl.TextColor3 = color
+function Simple_Create(pos, name, color, studs)
+    local line = Drawing.new("Text")
+    line.Text = name .. " [" .. tostring(studs) .. " Studs] "
+    line.Transparency = 1
+    line.Size = 3
+    line.Position = pos
+    line.color = color
 end
 
 -- Clear ESP
